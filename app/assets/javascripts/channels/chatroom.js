@@ -9,12 +9,11 @@ App.chatroom = App.cable.subscriptions.create("ChatroomChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  // `received` looks after how data from the server-side are handled
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+    alert(data['message'])
   },
 
-  // used to send data to its server-side representation
   speak: function(message) {
     return this.perform('speak');
   }
