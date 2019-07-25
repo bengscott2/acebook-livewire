@@ -1,2 +1,10 @@
-<h1>Chat#show</h1>
-<p>Find me in app/views/chat/show.html.erb</p>
+<h1>Acebook chat</h1>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<form>
+  <label>Say something:</label><br>
+  <input type="text" data-behavior="room_speaker">
+</form>
