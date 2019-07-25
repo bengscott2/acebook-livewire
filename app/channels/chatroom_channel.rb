@@ -10,8 +10,9 @@ class ChatroomChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def speak
+  def speak(chatroom_data)
     # custom action which will be used to receive data from its client-side
     #  representation
+    ActionCable.server.broadcast "chatroom_channel", message: chatroom_data['message']
   end
 end

@@ -15,7 +15,7 @@ App.chatroom = App.cable.subscriptions.create("ChatroomChannel", {
   },
 
   // used to send data to its server-side representation
-  speak: function() {
+  speak: function(message) {
     return this.perform('speak');
   }
 });
