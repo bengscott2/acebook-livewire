@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   root :to => 'home#index'
   mount Commontator::Engine => '/commontator'
+
+  # Serve websocket cable requests in-process
+  mount ActionCable.server => '/cable'
 end
