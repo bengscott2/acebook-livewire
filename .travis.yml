@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.6.3
 addons:
-  firefox: "33.0"
+  firefox: "30.0"
 script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
