@@ -9,9 +9,10 @@ App.chatroom = App.cable.subscriptions.create("ChatroomChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received: function(chatroom_data) {
+  received: function(broadcasted_data) {
     // Called when there's incoming data on the websocket for this channel
-    return alert(chatroom_data['message']);
+    $('messages').append(broadcasted_data['message']);
+    // return alert(chatroom_data['message']);
   },
 
   speak: function(message) {
