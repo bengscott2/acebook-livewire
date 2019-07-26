@@ -46,7 +46,6 @@ group :development, :test do
   gem 'rubocop', '~> 0.73'
   gem 'rubycritic', require: false
   gem 'selenium-webdriver'
-  gem 'geckodriver-helper'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'pry'
