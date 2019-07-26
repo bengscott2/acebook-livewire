@@ -35,7 +35,7 @@ gem 'devise'
 gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
-gem 'acts_as_votable', '~> 0.12.0'
+gem "acts_as_votable", "~> 0.12.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +49,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
+  gem 'pry'
+  gem 'geckodriver-helper'
 end
 
 group :development do
