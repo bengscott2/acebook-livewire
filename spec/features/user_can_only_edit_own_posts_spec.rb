@@ -29,11 +29,7 @@ RSpec.feature "Edit posts", type: :feature do
       fill_in "Message", with: "Hello, world!"
       click_button "Submit"
       click_link "Logout"
-      click_link "Sign up"
-      fill_in "Email", with: "differentemail@email.com"
-      fill_in "Password", with: "password"
-      fill_in "Password confirmation", with: "password"
-      click_button "Submit"
+      sign_up_different_user
       post_hi_earth
 
       first_post = page.find('div.post', text: 'Hello, world')
@@ -49,11 +45,7 @@ RSpec.feature "Edit posts", type: :feature do
       click_button "Edit"
       url = URI.parse(current_url).to_s[22..-1]
       click_link "Logout"
-      click_link "Sign up"
-      fill_in "Email", with: "differentemail@email.com"
-      fill_in "Password", with: "password"
-      fill_in "Password confirmation", with: "password"
-      click_button "Submit"
+      sign_up_different_user
       visit url
 
       expect(page).to have_current_path("/posts")
