@@ -58,13 +58,13 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Exclude:
-    - 'spec/seed_post_helper.rb'
+    - 'spec/**/*'
     - 'db/**/*'
 
 Metrics/AbcSize:
   Exclude:
     - 'db/**/*'
-
+    - 'spec/**/*'
 # Code Style
 # ==========
 #
