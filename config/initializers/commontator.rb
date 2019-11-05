@@ -148,7 +148,7 @@ Commontator.configure do |config|
   #   :s  (star ratings)
   #   :r  (reputation system)
   # Default: :n
-  config.comment_voting = :n
+  config.comment_voting = :l
 
   # vote_count_proc
   # Type: Proc
@@ -229,7 +229,7 @@ Commontator.configure do |config|
   #                   "#{thread.commontable.class.name} ##{thread.commontable.id}" }
   config.commontable_name_proc = ->(thread) {
     "#{thread.commontable.class.name} ##{thread.commontable.id}"
-  }                                 
+  }
 
   # comment_url_proc
   # Type: Proc
